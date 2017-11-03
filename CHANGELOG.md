@@ -1,11 +1,14 @@
-CHANGELOG, x6 Mark I - Robotic Arm, Change log file
+# CHANGELOG
+x6 Mark I - Robotic Arm, Change log file
 
-2017-10-29
-        * Improvment: Detailed documentation
+## 2017-10-29
+### Added
+- Detailed documentation
 
-2017-06-18
-        * Bug fix: Command G6 was responding "ok" before end of operation.
-        * Bug fix: Command G28 was responding "ok" before end of operation.
+## 2017-06-18
+### Fixed
+- Command G6 was responding "ok" before end of operation.
+- Command G28 was responding "ok" before end of operation.
 
 2017-05-15
         * Improvement: Added power detection before any move command.
