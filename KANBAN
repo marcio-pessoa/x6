@@ -1,0 +1,315 @@
+KANBAN, x6 Mark I - Robotic Arm, KANBAN file
+
+BACKLOG
++ Mechanics
+  * Case - Back cover
+    * Cutter
+      * AC connector
+      * USB connector
+      * DB-25
+  * Trocar parafusos de fixação do motor do eixo 1
++ Electronics
+  * Axis 2
+    * Cabling
+      * Revestir com tubo termo-retrátil
+  * Axis 3
+    * Cabling
+      * Revestir com tubo termo-retrátil
++ Software
+  * Firmware (Arduino)
+    * Commands
+      * 0
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * G2
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * G90
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * G91
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M15
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M87
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M89
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M91
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M92
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M99
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M100
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M111
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * R0
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+    * Firmware (Arduino)
+      * AxesHandler(
+        * Store in EEPROM last position reached
+      * Commands
+  * Slic3r
+    * Configure
++ Video
+  * A not so simple watch
+    * Material
+    * Preparação
+    * Script
+  * Robot interaction: x6 and x1
+    * Script
+      * Fazer o x6 ligar o x1 de forma repetitiva.
+      * Sempre que o x1 desligar o interruptor, o x6 deverá iniciar um novo
+        ciclo para ligar novamente o x1.
+
+TO DO
++ Mechanics
++ Electronics
+  * Power Supply temperature sensor
+    * Cabling
+    * Install
+  * Microcontroller temperature sensor
+    * Cabling
+    * Install
+  * RGB LED
+    * Cabling
+      * Os pinos 44, 45 e 45 do Arduino MEGA 2560 são PWM, vou realocar alguns
+        desses pinos para o LED RGB, devo abrir o x6 para alocar a 
+        funcionalidade atual desses pinos para outros pinos.
++ Software
+  * Firmware (Arduino)
+    * Commands
+      * G3
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * G6
+        * Revisar nomenclatura
+      * M400
+        * Description: Wait for current moves to finish
+        * Revisar implementação
+
+IN PROGRESS
++ Mechanics
+  * Fan
+    * Install
++ Electronics
+  * Fan
+    * Driver
+      * Cabling
++ Software
+  * Firmware (Arduino)
+    * Fan
+      * Integration
+
+TESTING
++ Mechanics
++ Electronics
++ Software
+  * Firmware (Arduino)
+    * axes_handle()
+      * Está armazenando os comandos (G0 X50)que foram inputados com o
+        dispositivo desligado, então, quando ligamos o dispositivo, os comandos
+        são executados, mas não deveriam.
+    * Commands
+      * G4
+        * Description: Dwell
+        * Revisar implementação
+        * Parameters
+          * Pnnn Time to wait, in milliseconds
+          * Snnn Time to wait, in seconds
+        * Example
+          * G4 P300; (wait 300ms)
+      * G6
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+        * Bug #2: Command is responding "ok" before end of operation
+      * G28
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+        * Bug #3: Command is responding "ok" before end of operation
+      * M17
+        * Revisar implementação
+        * Verificar se retorno do comando está correto.
+      * M18
+        * Revisar implementação
+          > 2017-02-28 - É necessário parar qualquer movimento antes de
+            desligar os motores, do contrário eles permanecerão se movendo e o
+            comando M18 não surtirá efeito algum.
+        * Verificar se retorno do comando está correto.
+      * M80
+        * Revisar implementação
+      * M81
+        * Revisar implementação
+
+DONE
++ Mechanics
+  * xC support
+    * Cut
+    * Finish
+    * Install
++ Electronics
+  * Cabling
+    * Adicionar sensor para diagnosticar se a fonte tem corrente DC
+    * DB-25 internal
+    * Axis 1
+      * Soldar no DB-25 do gabinete
+    * Axis 2
+    * Axis 3
+    * Axis 4
+      * Revestir com tubo termo-retrátil
+    * Axis 5
+      * Revestir com tubo termo-retrátil
+    * Axis 6
+      * Revestir com tubo termo-retrátil
+    * Clamp
+      * Revestir com tubo termo-retrátil
+  * Power Supply temperature sensor
+    * Build technical specification
+    * Buy
+    * Delivery
+  * Microcontroller temperature sensor
+    * Build technical specification
+    * Buy
+    * Delivery
+  * RGB LED
+    * Buy resistor
+      * 2 100R
+      * 1 150R
++ Software
+  * Firmware (Arduino)
+    * Commands
+      * G0
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+        * Bug: Command is responding "ok" before end of operation
+      * M0
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M17
+        * Revisar nomenclatura
+        * Revisar função
+      * M18
+        * Revisar nomenclatura
+        * Revisar função
+      * M80
+        * Revisar nomenclatura
+        * Revisar função
+      * M81
+        * Revisar nomenclatura
+        * Revisar função
+    * AxesHandler()
+      * Transformar command_power num handle, pois mesmo com tantos testes o 
+        command power ainda apresenta comportamento inadequado.
+    * DemonstrationHandler()
+      * Define demonstration period.
+        Example commmand:
+        demo 90
+        The command above turns on demo mode for 90 seconds.
+        O comando sem argumentos executa modo de demonstração por 60 segundos.
+        Para parar é possível usar o comando stop
+        Durante a execução, se inputado o comando demo novamente, é exibido o 
+        tempo restante de demonstração.
+    * PowerHandler()
+      * Bug: Standby não está funcionando
+        > 2017-03-22 - Removi standby.reset() das chamadas internas do
+          AxesHandler() que estavam impedindo o contador standby de progredir.
++ Video
+  * Tea time
+    * Material
+      * Xícara de vidro transparente
+      * 2 pires
+    * Preparação
+      * Posicione o x6
+      * Posicione a xícara com pires às 10 horas em relação ao x6
+      * Posicione a xícara auxiliar às 2 horas em relação ao x6
+      * Encaixar saquinho de chá no suporte do eixo 6
+      * Enrole a cordinha no suporte do eixo 6
+      * Coloque água quente na xicara
+    * Script
+      * Posicione o saquinho sobre a xícara
+      * Desenrole um pouco da minha
+      * Mergulhe o saquinho 5 vezes
+      * Deslize o saquinho pela borda da xícara para escoar o líquido
+      * Mova o saquinho sobre o pires auxiliar
+      * Desenrole o restante da cordinha, fazendo o saquinho cair sobre o
+        pires auxiliar
+      * Posicione sobre a placa e levan-te-a para até aparecer a mensagem:
+        "Thanks for watching"
+      * Mova para uma posição com belo movimento
+
+WON'T DO
++ Mechanics
++ Electronics
+  * Power Supply
+    * Aumentar a tensão da fonte de alimentação para o máximo suportado.
+      > 2016-10-22 - Isso não foi feito, pois componentes como o relé utilizam
+        a tensão da fonte de alimentação, logo podem sofrer danos se a tensão
+        for muito alta.
++ Software
+  * Firmware (Arduino)
+    * Commands
+      * G1
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+        > 2017-03-24 - Não se aplica ao dispositivo.
+      * M82
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+        > 2017-03-16 - Não se aplica ao dispositivo.
+      * M83
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+        > 2017-03-16 - Não se aplica ao dispositivo.
+      * M84
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+        > 2017-03-16 - Não se aplica ao dispositivo.
+      * M85
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+        > 2017-03-16 - Não se aplica ao dispositivo.
+      * M86
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+        > 2017-03-16 - Não se aplica ao dispositivo.
+      * M124
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+        > 2017-03-16 - Não se aplica ao dispositivo.
