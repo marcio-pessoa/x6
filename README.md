@@ -6,6 +6,15 @@
 
 [Kanban](KANBAN.md)
 
+# Mechanics
+
+## Case
+Technical specifications:
+- Material: Aluminum
+- Width: 155 mm
+- Height: 72 mm
+- Depth: 150.4 mm
+
 # Electronics
 
 # Arduino
@@ -183,6 +192,21 @@ Source: http://busyducks.com/ascii-art-arduinos
   3 |   4 | Elbow                                                            
   2 |   3 | Shoulder                                                         
   1 |   2 | Base                                                             
+
+## Status LED
+Os pinos 44, 45 e 45 do Arduino MEGA 2560 são PWM, vou realocar alguns desses pinos para o LED RGB, devo abrir o x6 para alocar a funcionalidade atual desses pinos para outros pinos.
+
+# Software
+
+## G-code
+      
+### G4
+        * Description: Dwell
+        * Parameters
+          * Pnnn Time to wait, in milliseconds
+          * Snnn Time to wait, in seconds
+        * Example
+          * G4 P300; (wait 300ms)
 
 ---
 [Arduino Mega 2560]: https://store.arduino.cc/usa/arduino-mega-2560-rev3

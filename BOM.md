@@ -1,20 +1,15 @@
-BOM, x6 Mark I - Robotic Arm, Bill of materials
+# BOM
+x6 Mark I - Robotic Arm, Bill of materials
 
-Label:
-  Status '-': OK
-  Status '+': Pending
+| Quant | Description          | ID                 | Bought     | Delivered  | Unit | Charge | Taxes |   Cost |
+|-------|----------------------|--------------------|------------|------------|------|--------|-------|--------|
+|     1 | Case                 |       171177929049 | 2014-07-08 | 2014-08-29 | each |  22.50 | 00.00 |  00.00 |
+|     1 | Arduino_Mega_2560    | 121021001026454322 | 2012-10-21 | 2013-mm-dd | each |  24.20 | 00.00 |  00.00 |
 
-Part list:
-- 1 x Aluminum electronic power enclosure PCB instrument Box Project DIY 155*150.4*72
-  - Technical specification
-    - URL: http://rover.ebay.com/rover/0/e11400.m1842.l3160/7?euid=8dacd17f880c41cba3523130ec12e3a8&loc=http%3A%2F%2Fcgi.ebay.com%2Fws%2FeBayISAPI.dll%3FViewItem%26item%3D171339264620%26ssPageName%3DADME%3AL%3AOC%3AUS%3A3160&exe=9760&ext=22535&sojTags=exe=exe,ext=ext
-  - Buy
-    - Date: Tue, Jul 8, 2014 at 8:28 PM
-    - Cost: USD 22.50
-    - eBay item ID: 171177929049
-  - Delivery
-    - Date: 2014-08-29
-  - Install
+
+
+
+
 - 1 x 2DOF Aluminum Short U bracket & Multifunction Bracket for Robot Servo Joint DIY
   - Technical specification
     - URL: http://www.dx.com/p/250674
@@ -25,6 +20,7 @@ Part list:
   - Delivery
     - Date: 2014-mm-dd
   - Install
+
 - HJ S3315D 15kg Torque Metal gear Digital Servo for Robot Truck R/C Helicopter - Black
   - Technical specification
     - URL: http://www.dx.com/p/193284
@@ -35,6 +31,7 @@ Part list:
   - Delivery
     - Date: 2014-mm-dd
   - Install
+
 - Towerpro MG995 Metal Servo with Gears and Parts - Black
   - Technical specification
     - URL: http://www.dx.com/p/20089
@@ -45,6 +42,7 @@ Part list:
   - Delivery
     - Date: 2014-mm-dd
   - Install
+
 - EMAX ES3104 Metal Analog Servo with Gears and Parts - Black (4.8~6.0V)
   - Technical specification
     - URL: http://www.dx.com/p/226837
@@ -55,6 +53,7 @@ Part list:
   - Delivery
     - Date: 2014-mm-dd
   - Install
+
 - DIY PC817 2-CH 5V Relay Module w/ Optocoupler Extension Board - Blue
   - Technical specification
     - URL: http://www.dx.com/p/290132
@@ -65,6 +64,7 @@ Part list:
   - Delivery
     - Date: 2014-mm-dd
   - Install
+
 - 5V 3.8A Regulated Switching Power Supply - Silver
   - Technical specification
     - URL: http://www.dx.com/p/145841
@@ -105,6 +105,7 @@ Part list:
   - Delivery
     - Date: 2014-mm-dd
   - Install
+
 - MEGA Sensor Shield V2.0 Dedicated Sensor Expansion Board for Arduino
   - Technical specification
     - URL: http://www.dx.com/p/120479
@@ -115,16 +116,7 @@ Part list:
   - Delivery
     - Date: 2014-mm-dd
   - Install
-- Arduino Mega 2560 ATmega2560 Module - Blue
-  - Technical specification
-    - URL: http://www.dx.com/p/144185
-  - Buy
-    - Date: Sun, Oct 21, 2012 at 4:40 PM 
-    - Cost: USD 24.20 
-    - DX item ID: 121021001026454322
-  - Delivery
-    - Date: 2013-mm-dd
-  - Install
+
 - 2 Metal U Holders + 2 Round Servo Mount Brackets w/ Screws for R/C Helicopter - Silver-193069
   - Technical specification
     - URL: http://www.dx.com/p/250674
@@ -135,6 +127,7 @@ Part list:
   - Delivery
     - Date: 2014-mm-dd
   - Install
+
 - 2DOF Aluminum Short U bracket & Multifunction Bracket for Robot Servo Joint DIY-250674
   - Technical specification
     - URL: http://www.dx.com/p/250674
@@ -145,6 +138,7 @@ Part list:
   - Delivery
     - Date: 2014-mm-dd
   - Install
+
 - Stainless Steel threaded bar M4
   - Technical specification
     - URL: http://www.ebay.com/itm/304-Stainless-Steel-Threaded-Rod-Bar-Studding-Allthread-M3-M4-M5-M6-M8-M10-M12-/321966375658?var=&hash=item4af6b102ea:m:mNZo7v0PdjNWkZEEpEwpMBw
@@ -155,6 +149,7 @@ Part list:
   - Delivery
     - Date: 2017-01-dd
   - Install
+
 - Acorn nut M4
   - Technical specification
     - URL: http://www.ebay.com/itm/Qty-10-M4-x-0-7mm-Pitch-Dome-Nuts-Acorn-Hex-Cap-Nuts-304-A2-Stainless-Steel-/182271690592?hash=item2a703d4760:g:ncUAAOSw2x1XLm5r
@@ -165,6 +160,7 @@ Part list:
   - Delivery
     - Date: 2016-12-dd
   - Install
+
 - Active Buzzer Long Continous Beep Speaker 5V
   - Technical specification
     - URL: http://rover.ebay.com/rover/0/e11400.m1842.l5919/7?euid=c724b22ee1d542f18b1fcea2a6a87b8d&loc=http%3A%2F%2Fpayments.ebay.com%2Fws%2FeBayISAPI.dll%3FViewPaymentStatus%26transId%3D711415126023%26itemId%3D361365119994%26qu%3D1&exe=13342&ext=33945&sojTags=exe=exe,ext=ext
@@ -174,6 +170,7 @@ Part list:
     - eBay item ID: 361365119994
     - Delivery: 2016-mm-dd
   - Install
+
 + Micro cooling fan DC 5V 0.1A 20mm
   - Technical specification
     - URL: http://rover.ebay.com/rover/0/e11400.m1842.l5919/7?euid=bf62fea28c164210a6544245121fb5d5&bu=44114865119&loc=http%3A%2F%2Fwww.ebay.com%2Fulk%2Fvod%3Ftransid%3D1699137934017%26itemid%3D271969912680%26qu%3D1&sojTags=bu=bu
@@ -183,5 +180,10 @@ Part list:
     - eBay item ID: 271969912680
     - Delivery: 2016-mm-dd
   + Install
+
+Currency: USD
+
+International IOF: 6.38%
+Domestic IOF: 0.38%
 
 Total cost: $210.4784054
