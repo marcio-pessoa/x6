@@ -1,0 +1,119 @@
+---
+- 'BACKLOG':
+  - (Software) ROS - Integration
+  - (Mechanics) Case back cover - Cut AC connector
+  - (Mechanics) Case back cover - Cut USB connector
+  - (Mechanics) Case back cover - Cut DB-25
+  - (Mechanics) Axis 1 - Change screws
+  - (Electronics) Axis 2 - Cabling revestir com tubo termo-retratil
+  - (Electronics) Axis 3 - Cabling revestir com tubo termo-retratil
+  - (Software) Command 0 - Check name
+  - (Software) Command 0 - Check function
+  - (Software) Command 0 - Check code
+  - (Software) Command G2 - Check name
+  - (Software) Command G2 - Check function
+  - (Software) Command G2 - Check code
+  - (Software) Command G90 - Check name
+  - (Software) Command G90 - Check function
+  - (Software) Command G90 - Check code
+  - (Software) Command G91 - Check name
+  - (Software) Command G91 - Check function
+  - (Software) Command G91 - Check code
+  - (Software) Command M91 - Check name
+  - (Software) Command M91 - Check function
+  - (Software) Command M91 - Check code
+  - (Software) Command M92 - Check name
+  - (Software) Command M92 - Check function
+  - (Software) Command M92 - Check code
+  - (Software) Command M99 - Check name
+  - (Software) Command M99 - Check function
+  - (Software) Command M99 - Check code
+  - (Software) Command M15 - Check name
+  - (Software) Command M15 - Check function
+  - (Software) Command M15 - Check code
+  - (Software) Command M87 - Check name
+  - (Software) Command M87 - Check function
+  - (Software) Command M87 - Check code
+  - (Software) Command M89 - Check name
+  - (Software) Command M89 - Check function
+  - (Software) Command M89 - Check code
+  - (Software) Command M100 - Check name
+  - (Software) Command M100 - Check function
+  - (Software) Command M100 - Check code
+  - (Software) Command M111 - Check name
+  - (Software) Command M111 - Check function
+  - (Software) Command M111 - Check code
+  - (Software) Command R0 - Check name
+  - (Software) Command R0 - Check function
+  - (Software) Command R0 - Check code
+  - (Software) AxesHandler- Store in EEPROM last position reached
+  - (Video) A not so simple watch - Material
+  - (Video) A not so simple watch - Record
+  - (Video) A not so simple watch - Script
+  - (Video) Robot interaction x6 and x1 - Script
+  - (Video) Robot interaction x6 and x1 - Fazer o x6 ligar o x1 de forma repetitiva
+  - (Video) Robot interaction x6 and x1 - Sempre que o x1 desligar o interruptor, o x6 devera iniciar um novo ciclo para ligar novamente o x1
+
+- 'TO DO':
+  - (Electronics) Power Supply temperature sensor - Cabling
+  - (Electronics) Power Supply temperature sensor - Install
+  - (Electronics) Microcontroller temperature sensor - Cabling
+  - (Electronics) Microcontroller temperature sensor - Install
+  - (Electronics) RGB LED - Cabling
+  - (Electronics) RGB LED - Install
+  - (Software) Command G6 - Check name
+  - (Software) Command G3 - Check name
+  - (Software) Command G3 - Check function
+  - (Software) Command G3 - Check code
+  - (Software) Command M400 - Check function
+  - (Software) Command M400 - Wait for current moves to finish
+
+- 'DOING':
+  - (Mechanics) Fan - Install
+  - (Electronics) Fan Driver - Build
+  - (Electronics) Fan Driver - Cabling
+  - (Software) Fan - Integration
+
+- 'TESTING':
+  - (Software) axes_handle - Esta armazenando os comandos (G0 X50) que foram inputados com o dispositivo desligado, entao, quando ligamos o dispositivo os comandos sao executados mas nao deveriam.
+  - (Software) Command G4 - Check code
+  - (Software) Command G6 - Check name
+  - (Software) Command G6 - Check function
+  - (Software) Command G6 - Check code
+  - (Software) Command G6 - Bug 1: Command is responding ok before end of operation
+  - (Software) Command G28 - Check name
+  - (Software) Command G28 - Check function
+  - (Software) Command G28 - Check code
+  - (Software) Command G28 - Bug 2: Command is responding ok before end of operation
+  - (Software) Command M17 - Check code
+  - (Software) Command M17 - Check return
+  - (Software) Command M18 - Check code
+  - (Software) Command M80 - Check code
+  - (Software) Command M81 - Check code
+
+- 'DONE':
+  - (Video) Tea time - Material
+  - (Video) Tea time - Script
+  - (Video) Tea time - Record
+  - (Video) Tea time - Edit
+  - (Video) Tea time - Publish
+  - (Software) Command G0 - Check name
+  - (Software) Command G0 - Check function
+  - (Software) Command G0 - Check code
+  - (Software) Command G0 - Bug Command is responding ok before end of operation
+  - (Software) Command M0 - Check name
+  - (Software) Command M0 - Check function
+  - (Software) Command M0 - Check code
+  - (Software) Command M17 - Check name
+  - (Software) Command M17 - Check function
+  - (Software) Command M18 - Check name
+  - (Software) Command M18 - Check function
+  - (Software) Command M80 - Check name
+  - (Software) Command M80 - Check function
+  - (Software) Command M81 - Check name
+  - (Software) Command M81 - Check function
+  - (Mechanics) xC Mark I support - Cut
+  - (Mechanics) xC Mark I support - Finish
+  - (Mechanics) xC Mark I support - Install
+  - (Electronics) DB-25 male - Cabling
+  - (Electronics) DB-25 female - Cabling
