@@ -199,7 +199,16 @@ Os pinos 44, 45 e 45 do Arduino MEGA 2560 são PWM, vou realocar alguns desses p
 # Software
 
 ## G-code
-      
+
+### G0
+X (left, right)
+Y (up, down)
+Z (left, right)
+U (up, down)
+V
+W
+T
+
 ### G4
         * Description: Dwell
         * Parameters

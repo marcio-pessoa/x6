@@ -1,9 +1,15 @@
 ---
 - 'BACKLOG':
-  - (Software) ROS - Integration
   - (Mechanics) Case back cover - Cut AC connector
   - (Mechanics) Case back cover - Cut USB connector
   - (Mechanics) Case back cover - Cut DB-25
+  - (Software) Command G6 - Check name
+  - (Software) Command G3 - Check name
+  - (Software) Command G3 - Check function
+  - (Software) Command G3 - Check code
+  - (Software) Command M400 - Check function
+  - (Software) Command M400 - Wait for current moves to finish
+  - (Software) ROS - Integration
   - (Mechanics) Axis 1 - Change screws
   - (Electronics) Axis 2 - Cabling revestir com tubo termo-retratil
   - (Electronics) Axis 3 - Cabling revestir com tubo termo-retratil
@@ -61,12 +67,6 @@
   - (Electronics) Microcontroller temperature sensor - Install
   - (Electronics) RGB LED - Cabling
   - (Electronics) RGB LED - Install
-  - (Software) Command G6 - Check name
-  - (Software) Command G3 - Check name
-  - (Software) Command G3 - Check function
-  - (Software) Command G3 - Check code
-  - (Software) Command M400 - Check function
-  - (Software) Command M400 - Wait for current moves to finish
 
 - 'DOING':
   - (Mechanics) Fan - Install
