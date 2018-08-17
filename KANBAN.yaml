@@ -61,6 +61,7 @@
   - (Video) Robot interaction x6 and x1 - Sempre que o x1 desligar o interruptor, o x6 devera iniciar um novo ciclo para ligar novamente o x1
 
 - 'TO DO':
+  - (Electronics) Fan Driver - Cabling
   - (Electronics) Power Supply temperature sensor - Cabling
   - (Electronics) Power Supply temperature sensor - Install
   - (Electronics) Microcontroller temperature sensor - Cabling
@@ -71,7 +72,6 @@
 - 'DOING':
   - (Mechanics) Fan - Install
   - (Electronics) Fan Driver - Build
-  - (Electronics) Fan Driver - Cabling
   - (Software) Fan - Integration
 
 - 'TESTING':
