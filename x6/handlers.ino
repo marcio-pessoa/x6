@@ -103,67 +103,67 @@ void DemonstrationHandler() {
   }
 }
 
-void HealthCheckHandler() {
+// void HealthCheckHandler() {
   // Temperature check
-  if (health_check_period.check()) {
+  // if (health_check_period.check()) {
     // Check sensor with high temperature
-    float high_temperature = HighValue(microcontroller_temperature.valueRead(), 
-                                       power_supply_temperature.valueRead());
+    // float high_temperature = HighValue(microcontroller_temperature.valueRead(), 
+                                       // power_supply_temperature.valueRead());
     // Set fan speed
-    fan_control.writeSpeed(map(constrain(high_temperature, 20, 40),  // temperature
-                             20, 40,    // From (minimum and maximum)
-                             0, 100));  // To (minimum and maximum)
+    // fan_control.writeSpeed(map(constrain(high_temperature, 20, 40),  // temperature
+                             // 20, 40,    // From (minimum and maximum)
+                             // 0, 100));  // To (minimum and maximum)
     // Join alarm status
     //~ byte general_status = UNKNOWN;
-    if (microcontroller_temperature.status() == OK and
-        power_supply_temperature.status() == OK) {
-      general_status = OK;
-    }
-    else if (microcontroller_temperature.status() == WARNING or
-             power_supply_temperature.status() == WARNING) {
-      general_status = WARNING;
-    }
-    else if (microcontroller_temperature.status() == CRITICAL or
-             power_supply_temperature.status() == CRITICAL) {
-      general_status = CRITICAL;
-    }
-    else {
-      general_status = UNKNOWN;
-    }
+    // if (microcontroller_temperature.status() == OK and
+        // power_supply_temperature.status() == OK) {
+      // general_status = OK;
+    // }
+    // else if (microcontroller_temperature.status() == WARNING or
+             // power_supply_temperature.status() == WARNING) {
+      // general_status = WARNING;
+    // }
+    // else if (microcontroller_temperature.status() == CRITICAL or
+             // power_supply_temperature.status() == CRITICAL) {
+      // general_status = CRITICAL;
+    // }
+    // else {
+      // general_status = UNKNOWN;
+    // }
     // Check fan
-    if (fan.status() == CRITICAL and debug) {
-      command_fan();
-    }
+    // if (fan.status() == CRITICAL and debug) {
+      // command_fan();
+    // }
     // If there are some temperature CRITICAL alarm
-    if (microcontroller_temperature.status() == CRITICAL or
-        power_supply_temperature.status() == CRITICAL) {
-        if (debug) {
-          CommandM91();
-        }
-        CommandM81(3);  // Power off stage 3
-    }
+    // if (microcontroller_temperature.status() == CRITICAL or
+        // power_supply_temperature.status() == CRITICAL) {
+        // if (debug) {
+          // CommandM91();
+        // }
+        // CommandM81(3);  // Power off stage 3
+    // }
     // Notify status via LED
-    switch (general_status) {
-      case OK: {
-        led.set(0, 0, 255);
-        break;
-      }
-      case WARNING: {
-        led.set(255, 255, 0);
-        break;
-      }
-      case CRITICAL: {
-        led.set(255, 0, 0);
-        break;
-      }
-      case UNKNOWN: 
-      default: {
-        led.set(0, 255, 0);
-        break;
-      }
-    }
-  }
-}
+    // switch (general_status) {
+      // case OK: {
+        // led.set(0, 0, 255);
+        // break;
+      // }
+      // case WARNING: {
+        // led.set(255, 255, 0);
+        // break;
+      // }
+      // case CRITICAL: {
+        // led.set(255, 0, 0);
+        // break;
+      // }
+      // case UNKNOWN: 
+      // default: {
+        // led.set(0, 255, 0);
+        // break;
+      // }
+    // }
+  // }
+// }
 
 void NotificationHandler() {
   // LED
@@ -182,14 +182,14 @@ void PowerHandler() {
   powerFailure();
 }
 
-void SensorsHandler() {
+// void SensorsHandler() {
   // Temperature check
-  if (temperature_status.check()) {
+  // if (temperature_status.check()) {
     //~ microcontroller_temperature.check(microcontroller_TMP36.read());
     //~ power_supply_temperature.check(power_supply_TMP36.read());
-  }
+  // }
   // Fan check
-  if (fan_status.check()) {
-    fan.check(fan_control.readSpeed());
-  }
-}
+  // if (fan_status.check()) {
+    // fan.check(fan_control.readSpeed());
+  // }
+// }

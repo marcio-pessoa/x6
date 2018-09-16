@@ -440,7 +440,7 @@ bool CommandM100(char letter = 0) {
     echoln(F("M88\tDistance measure"));
     echoln(F("M89\tMemory information"));
     echoln(F("M90\tFan information"));
-    echoln(F("M91\tTemperature information"));
+    // echoln(F("M91\tTemperature information"));
     echoln(F("M92\tSystem information"));
     echoln(F("M99\tReset system"));
     echoln(F("M100\tThis help message"));
@@ -608,8 +608,8 @@ bool CommandM15() {
   CommandM92();
   CommandM89();
   CommandM80();
-  CommandM91();
-  command_fan();
+  // CommandM91();
+  // command_fan();
   command_uptime();
   command_standby();
   command_axes();
@@ -685,44 +685,42 @@ bool CommandM89() {
  * Returns
  *   void
  */
-bool CommandM91() {
-  // Power Supply Temperature
-  echoln(power_supply_temperature.nameRead() + " (" +
-         power_supply_temperature.status_name() + "): " + 
-         power_supply_temperature.valueRead() +
-         power_supply_temperature.unitRead());
-  if ((debug_mode))
-    echoln("  Warning low: " +
-           String(power_supply_temperature.min_warningRead()) +
-           power_supply_temperature.unitRead() + "\n" +
-           "  Critical low: " +
-           String(power_supply_temperature.min_criticalRead()) +
-           power_supply_temperature.unitRead() + "\n" +
-           "  Warning high: " +
-           String(power_supply_temperature.max_warningRead()) +
-           power_supply_temperature.unitRead() + "\n" +
-           "  Critical high: " +
-           String(power_supply_temperature.max_criticalRead()) +
-           power_supply_temperature.unitRead());
-  // Microcontroller Temperature
-  echoln(microcontroller_temperature.nameRead() + " (" +
-         microcontroller_temperature.status_name() + "): " + 
-         microcontroller_temperature.valueRead() +
-         microcontroller_temperature.unitRead());
-  if ((debug_mode))
-    echoln("  Warning: " +
-           String(microcontroller_temperature.min_warningRead()) +
-           microcontroller_temperature.unitRead() + "\n" +
-           "  Critical low: " +
-           String(microcontroller_temperature.min_criticalRead()) +
-           microcontroller_temperature.unitRead() + "\n" +
-           "  Warning high: " +
-           String(microcontroller_temperature.max_warningRead()) +
-           microcontroller_temperature.unitRead() + "\n" +
-           "  Critical high: " +
-           String(microcontroller_temperature.max_criticalRead()) +
-           microcontroller_temperature.unitRead());
-}
+// bool CommandM91() {
+  // echoln(power_supply_temperature.nameRead() + " (" +
+         // power_supply_temperature.status_name() + "): " + 
+         // power_supply_temperature.valueRead() +
+         // power_supply_temperature.unitRead());
+  // if ((debug_mode))
+    // echoln("  Warning low: " +
+           // String(power_supply_temperature.min_warningRead()) +
+           // power_supply_temperature.unitRead() + "\n" +
+           // "  Critical low: " +
+           // String(power_supply_temperature.min_criticalRead()) +
+           // power_supply_temperature.unitRead() + "\n" +
+           // "  Warning high: " +
+           // String(power_supply_temperature.max_warningRead()) +
+           // power_supply_temperature.unitRead() + "\n" +
+           // "  Critical high: " +
+           // String(power_supply_temperature.max_criticalRead()) +
+           // power_supply_temperature.unitRead());
+  // echoln(microcontroller_temperature.nameRead() + " (" +
+         // microcontroller_temperature.status_name() + "): " + 
+         // microcontroller_temperature.valueRead() +
+         // microcontroller_temperature.unitRead());
+  // if ((debug_mode))
+    // echoln("  Warning: " +
+           // String(microcontroller_temperature.min_warningRead()) +
+           // microcontroller_temperature.unitRead() + "\n" +
+           // "  Critical low: " +
+           // String(microcontroller_temperature.min_criticalRead()) +
+           // microcontroller_temperature.unitRead() + "\n" +
+           // "  Warning high: " +
+           // String(microcontroller_temperature.max_warningRead()) +
+           // microcontroller_temperature.unitRead() + "\n" +
+           // "  Critical high: " +
+           // String(microcontroller_temperature.max_criticalRead()) +
+           // microcontroller_temperature.unitRead());
+// }
 
 /* CommandM92
  * 
@@ -796,16 +794,16 @@ bool CommandR0() {
  * Returns
  *   void
  */
-bool command_fan() {
-  echoln(fan.nameRead() + " (" +
-         fan.status_name() + "): " +
-         (int)fan.valueRead() +
-         fan.unitRead());
-  if ((debug_mode)) {
-    echoln("  Warning: " + String(fan.max_warningRead()) + fan.unitRead() + "\n" +
-           "  Critical: " + String(fan.max_criticalRead()) + fan.unitRead());
-  }
-}
+// bool command_fan() {
+  // echoln(fan.nameRead() + " (" +
+         // fan.status_name() + "): " +
+         // (int)fan.valueRead() +
+         // fan.unitRead());
+  // if ((debug_mode)) {
+    // echoln("  Warning: " + String(fan.max_warningRead()) + fan.unitRead() + "\n" +
+           // "  Critical: " + String(fan.max_criticalRead()) + fan.unitRead());
+  // }
+// }
 
 /* command_standby
  * 

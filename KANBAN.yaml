@@ -1,8 +1,15 @@
 ---
 - 'BACKLOG':
-  - (Mechanics) Case back cover - Cut AC connector
-  - (Mechanics) Case back cover - Cut USB connector
-  - (Mechanics) Case back cover - Cut DB-25
+  - (Mechanics) Fan - Install
+  - (Electronics) Fan Driver - Build
+  - (Software) Fan - Integration
+  - (Electronics) Fan Driver - Cabling
+  - (Electronics) Power Supply temperature sensor - Cabling
+  - (Electronics) Power Supply temperature sensor - Install
+  - (Electronics) Microcontroller temperature sensor - Cabling
+  - (Electronics) Microcontroller temperature sensor - Install
+  - (Electronics) RGB LED - Cabling
+  - (Electronics) RGB LED - Install
   - (Software) Command G6 - Check name
   - (Software) Command G3 - Check name
   - (Software) Command G3 - Check function
@@ -61,18 +68,11 @@
   - (Video) Robot interaction x6 and x1 - Sempre que o x1 desligar o interruptor, o x6 devera iniciar um novo ciclo para ligar novamente o x1
 
 - 'TO DO':
-  - (Electronics) Fan Driver - Cabling
-  - (Electronics) Power Supply temperature sensor - Cabling
-  - (Electronics) Power Supply temperature sensor - Install
-  - (Electronics) Microcontroller temperature sensor - Cabling
-  - (Electronics) Microcontroller temperature sensor - Install
-  - (Electronics) RGB LED - Cabling
-  - (Electronics) RGB LED - Install
+  - (Mechanics) Case back cover - Cut AC connector
+  - (Mechanics) Case back cover - Cut USB connector
+  - (Mechanics) Case back cover - Cut DB-25
 
 - 'DOING':
-  - (Mechanics) Fan - Install
-  - (Electronics) Fan Driver - Build
-  - (Software) Fan - Integration
 
 - 'TESTING':
   - (Software) axes_handle - Esta armazenando os comandos (G0 X50) que foram inputados com o dispositivo desligado, entao, quando ligamos o dispositivo os comandos sao executados mas nao deveriam.

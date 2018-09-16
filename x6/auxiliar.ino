@@ -76,6 +76,6 @@ void standbyReset() {
  * Returns
  *   void
  */
-void spinCounter() {
-  fan_control.counter();
-}
+// void spinCounter() {
+  // fan_control.counter();
+// }

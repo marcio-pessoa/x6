@@ -50,26 +50,26 @@ Switch stage3(relay_stage3_pin,  // Electronic identifier
               true);  // Inverse logic
 
 // Temperature sensors
-Temperature microcontroller_TMP36;  // Microcontroller Temperature sensor
-Alarm microcontroller_temperature(60,  // Maximum warning
-                                  70,  // Maximum critical
-                                  10,  // Minimum warning
-                                  5);  // Minimum critical
-Temperature power_supply_TMP36;  // Power Supply Temperature sensor
-Alarm power_supply_temperature(60,  // Maximum warning
-                               70,  // Maximum critical
-                               10,  // Minimum warning
-                               5);  // Minimum critical
-Timer temperature_status(temperature_timer * 1000);
+// Temperature microcontroller_TMP36;  // Microcontroller Temperature sensor
+// Alarm microcontroller_temperature(60,  // Maximum warning
+                                  // 70,  // Maximum critical
+                                  // 10,  // Minimum warning
+                                  // 5);  // Minimum critical
+// Temperature power_supply_TMP36;  // Power Supply Temperature sensor
+// Alarm power_supply_temperature(60,  // Maximum warning
+                               // 70,  // Maximum critical
+                               // 10,  // Minimum warning
+                               // 5);  // Minimum critical
+// Timer temperature_status(temperature_timer * 1000);
 
 // Fan
-Fan fan_control(fan_control_pin, fan_sensor_pin);
-Alarm fan(80,   // Warning
-          90);  // Critical
-Timer fan_status(fan_timer * 1000);
+// Fan fan_control(fan_control_pin, fan_sensor_pin);
+// Alarm fan(80,   // Warning
+          // 90);  // Critical
+// Timer fan_status(fan_timer * 1000);
 
 // System check
-Timer health_check_period(health_check_timer * 1000);
+// Timer health_check_period(health_check_timer * 1000);
 
 // Demonstration timer
 Timer demonstration_period(0, COUNTDOWN);
@@ -164,6 +164,8 @@ void setup() {
   // Start up message
   echoln("Starting...");
   CommandM92();  // System information
+  // RGB LED
+  led.set(0, 0, 255);
   // Power relays
   stage2.nameWrite("Stage 2");
   stage3.nameWrite("Stage 3");
@@ -171,36 +173,36 @@ void setup() {
   // Power supply DC detection
   pinMode(power_sensor_pin, INPUT);
   // Temperature sensors
-  microcontroller_TMP36.attach(microcontroller_temperature_pin);
-  microcontroller_TMP36.type(TMP36);
-  microcontroller_temperature.nameWrite("Microcontroller temperature");
-  microcontroller_temperature.unitWrite(" *C");
-  microcontroller_temperature.force_check(OK);  //TODO(Marcio): Remove after sensor installation
-  power_supply_TMP36.attach(power_supply_temperature_pin);
-  power_supply_TMP36.type(TMP36);
-  power_supply_temperature.nameWrite("Power supply temperature");
-  power_supply_temperature.unitWrite(" *C");
-  power_supply_temperature.force_check(OK);  //TODO(Marcio): Remove after sensor installation
+  // microcontroller_TMP36.attach(microcontroller_temperature_pin);
+  // microcontroller_TMP36.type(TMP36);
+  // microcontroller_temperature.nameWrite("Microcontroller temperature");
+  // microcontroller_temperature.unitWrite(" *C");
+  // microcontroller_temperature.force_check(OK);  //TODO(Marcio): Remove after sensor installation
+  // power_supply_TMP36.attach(power_supply_temperature_pin);
+  // power_supply_TMP36.type(TMP36);
+  // power_supply_temperature.nameWrite("Power supply temperature");
+  // power_supply_temperature.unitWrite(" *C");
+  // power_supply_temperature.force_check(OK);  //TODO(Marcio): Remove after sensor installation
   // Fan
-  fan_control.writeSpeed(100);
-  attachInterrupt(fan_sensor_pin, spinCounter, RISING);
-  fan.force_check(OK);
-  fan.nameWrite("Fan");
-  fan.unitWrite("%");
+  // fan_control.writeSpeed(100);
+  // attachInterrupt(fan_sensor_pin, spinCounter, RISING);
+  // fan.force_check(OK);
+  // fan.nameWrite("Fan");
+  // fan.unitWrite("%");
   // Attach servo motors
   CommandM17();
   // Random number generator seed
   pinMode(random_Seed_pin, INPUT);
   randomSeed(analogRead(random_Seed_pin));
   // Start up sound
-  tone(speaker_pin, 2217, 60);
+  //tone(speaker_pin, 2217, 60);
   // G-code ready to receive commands
   GcodeReady();
 }
 
 void loop() {
-  SensorsHandler();
-  HealthCheckHandler();
+  // SensorsHandler();
+  // HealthCheckHandler();
   NotificationHandler();
   AxesHandler();
   DemonstrationHandler();
