@@ -1,6 +1,6 @@
 /* gcode.ino, x6 Mark I - Robotic Arm, G-code parser sketch file
  * 
- * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+ * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
 

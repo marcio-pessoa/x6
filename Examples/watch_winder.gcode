@@ -1,7 +1,7 @@
 ; watch_winder.gcode, x6 Mark I - Robotic Arm, G-code example file
 ; This program use x6 Mark I to wind an automatic watch.
 ; 
-; Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+; Author: Márcio Pessoa <marcio.pessoa@gmail.com>
 ; Contributors: none
 ; 
 ; Change log:

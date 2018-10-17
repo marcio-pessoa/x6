@@ -1,6 +1,6 @@
 /* config.h, x6 Mark I - Robotic Arm, Arduino project config file
  * 
- * Author: Márcio Pessoa <marcio@pessoa.eti.br>
+ * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
 

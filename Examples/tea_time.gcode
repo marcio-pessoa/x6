@@ -1,7 +1,7 @@
 ; tea_time.gcode, x6 Mark I - Robotic Arm, G-code example file
 ; This program use x6 Mark I to make a tea.
 ; 
-; Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+; Author: Márcio Pessoa <marcio.pessoa@gmail.com>
 ; Contributors: none
 ; 
 ; Change log:

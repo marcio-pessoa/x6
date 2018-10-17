@@ -1,6 +1,6 @@
 /* auxiliar.ino, x6 Mark I - Robotic Arm, Arduino auxiliar sketch file
  * 
- * Author: Márcio Pessoa <marcio@pessoa.eti.br>
+ * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
 

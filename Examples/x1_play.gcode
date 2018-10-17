@@ -1,7 +1,7 @@
 ; x1_play.gcode, x6 Mark I - Robotic Arm, G-code example file
 ; This program use x6 Mark I to play and interact with x1 Mark I.
 ; 
-; Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+; Author: Márcio Pessoa <marcio.pessoa@gmail.com>
 ; Contributors: none
 ; 
 ; Change log:
