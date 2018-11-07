@@ -6,6 +6,9 @@
 
 [Kanban](KANBAN.md)
 
+## Introduction
+![x6 Mark I](Documents/Pictures/IMG_20151103_2354442.jpg)
+
 # Mechanics
 
 ## Case
