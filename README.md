@@ -1,13 +1,16 @@
 # x6 Mark I - Robotic Arm
 
+## Introduction
+![x6 Mark I](Documents/Pictures/IMG_20151103_2354442.jpg)
+
+## Videos
+Watch this projects videos on [YouTube Playlist].
+
 [Change log](CHANGELOG.md)
 
 [Bill of materials](BOM.md)
 
 [Kanban](KANBAN.md)
-
-## Introduction
-![x6 Mark I](Documents/Pictures/IMG_20151103_2354442.jpg)
 
 # Mechanics
 
@@ -222,3 +225,4 @@ T
 
 ---
 [Arduino Mega 2560]: https://store.arduino.cc/usa/arduino-mega-2560-rev3
+[YouTube Playlist]: https://www.youtube.com/watch?v=jWy2m01KljI&list=PLs1JZHyVhlZVC7OqEWRuzXZp-pLl_9orX
