@@ -1,5 +1,5 @@
 /* gcode.ino, x6 Mark I - Robotic Arm, G-code parser sketch file
- * 
+ *
  * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
@@ -12,16 +12,16 @@ int buffer_pointer = 0;
 char last_buffer[BUFFER_SIZE];
 int last_buffer_pointer = 0;
 
-/* 
- * 
+/*
+ *
  * Description
  *   .
- * 
+ *
  *   ()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -35,16 +35,16 @@ void status(bool i) {
   Serial.println(i == false ? F("ok") : F("nok"));
 }
 
-/* 
- * 
+/*
+ *
  * Description
  *   .
- * 
+ *
  *   ()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -52,16 +52,16 @@ void echo(String message) {
   Serial.print(message);
 }
 
-/* 
- * 
+/*
+ *
  * Description
  *   .
- * 
+ *
  *   ()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -69,16 +69,16 @@ void echoln(String message) {
   echo(message + "\n");
 }
 
-/* 
- * 
+/*
+ *
  * Description
  *   .
- * 
+ *
  *   ()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -88,16 +88,16 @@ void debug(String message) {
   }
 }
 
-/* 
- * 
+/*
+ *
  * Description
  *   .
- * 
+ *
  *   ()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -107,16 +107,16 @@ void debugln(String message) {
   }
 }
 
-/* 
- * 
+/*
+ *
  * Description
  *   .
- * 
+ *
  *   ()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -124,16 +124,16 @@ void GcodeReady() {
   buffer_pointer = 0;
 }
 
-/* 
- * 
+/*
+ *
  * Description
  *   .
- * 
+ *
  *   ()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -151,16 +151,16 @@ void GcodeCheck() {
   }
 }
 
-/* 
- * 
+/*
+ *
  * Description
  *   .
- * 
+ *
  *   ()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -175,16 +175,16 @@ float GcodeNumber(char code, float val) {
   return val;
 }
 
-/* 
- * 
+/*
+ *
  * Description
  *   .
- * 
+ *
  *   ()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -193,16 +193,16 @@ void GcodeCopyCommand() {
   last_buffer_pointer = buffer_pointer;
 }
 
-/* 
- * 
+/*
+ *
  * Description
  *   .
- * 
+ *
  *   ()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -214,26 +214,26 @@ void GcodeRepeat() {
   GcodeReady();
 }
 
-/* 
- * 
+/*
+ *
  * Description
  *   .
- * 
+ *
  *   ()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
 int GcodeParse() {
-  // 
+  //
   bool retval = false;
   bool skip_status = false;
   char letter = buffer[0];
   byte number = GcodeNumber(letter, -1);
-  // 
+  //
   switch (letter) {
     case 'G':
       switch (number) {
