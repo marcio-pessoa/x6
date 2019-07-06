@@ -206,13 +206,13 @@ void GcodeCopyCommand() {
  * Returns
  *   void
  */
-void GcodeRepeat() {
-  strncpy(buffer, last_buffer, last_buffer_pointer);
-  buffer_pointer = last_buffer_pointer;
-  echo(String(last_buffer));
-  GcodeParse();
-  GcodeReady();
-}
+//void GcodeRepeat() {
+  //strncpy(buffer, last_buffer, last_buffer_pointer);
+  //buffer_pointer = last_buffer_pointer;
+  //echo(String(last_buffer));
+  //GcodeParse();
+  //GcodeReady();
+//}
 
 /*
  *
@@ -326,14 +326,14 @@ int GcodeParse() {
           break;
       }
       break;
-    case 'R':
-      switch(number) {
-        case 0:
-        default:
-          CommandR0();
-          return 0;
-      }
-      break;
+    //case 'R':
+      //switch(number) {
+        //case 0:
+        //default:
+          //CommandR0();
+          //return 0;
+      //}
+      //break;
     default:
       if (buffer_pointer > 2) {
         Command0();

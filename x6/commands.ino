@@ -1,19 +1,19 @@
 /* commands.ino, x6 Mark I - Robotic Arm, Arduino commands sketch file
- * 
+ *
  * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
 
 /* Command0
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   Command0()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -23,15 +23,15 @@ bool Command0() {
 }
 
 /* CommandG0
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   CommandG0()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -72,15 +72,15 @@ bool CommandG0(int x, int y, int z, int u, int v, int w, int t) {
 }
 
 /* CommandG3
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   CommandG3()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -110,15 +110,15 @@ bool CommandG3(int x, int y, int z, int u, int v, int w, int t) {
 }
 
 /* CommandG6
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   CommandG6()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -142,15 +142,15 @@ bool CommandG6(unsigned long seconds) {
 }
 
 /* CommandG28
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   CommandG28()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -179,15 +179,15 @@ bool CommandG28() {
 }
 
 /* CommandG90
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   CommandG90()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -203,15 +203,15 @@ bool CommandG90() {
 }
 
 /* CommandG91
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   CommandG91()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -227,15 +227,15 @@ bool CommandG91() {
 }
 
 /* CommandM17
- * 
+ *
  * Description
  *   Attach motors.
- * 
+ *
  *   CommandM17()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -259,15 +259,15 @@ bool CommandM17() {
 }
 
 /* CommandM18
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   CommandM18()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -284,15 +284,15 @@ bool CommandM18() {
 }
 
 /* CommandM80
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   CommandM80()
- * 
+ *
  * Parameters
  *   stage
- * 
+ *
  * Returns
  *   bool
  */
@@ -328,9 +328,9 @@ bool CommandM80(byte stage) {
       echo("Power status");
       if ((debug_mode)) {
         echoln(String("\n") +
-               "  " + 
+               "  " +
                stage2.nameRead() + ": " + (stage2.status() ? "On" : "Off") +
-               "\n" + "  " + 
+               "\n" + "  " +
                stage3.nameRead() + ": " + (stage3.status() ? "On" : "Off") +
                "\n" + "  DC current: " +
                (digitalRead(power_sensor_pin) ? "Yes" : "No"));
@@ -345,15 +345,15 @@ bool CommandM80(byte stage) {
 }
 
 /* CommandM81
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   CommandM81()
- * 
+ *
  * Parameters
  *   stage
- * 
+ *
  * Returns
  *   bool
  */
@@ -381,15 +381,15 @@ bool CommandM81(byte stage) {
 }
 
 /* CommandM99
- * 
+ *
  * Description
  *   Reset system.
- * 
+ *
  *   CommandM99()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -401,17 +401,17 @@ bool CommandM99() {
 }
 
 /* CommandM100
- * 
+ *
  * Description
  *   Shows help messages.
- * 
+ *
  *   CommandM100()
- * 
+ *
  * Parameters
  *   letter: The command initial letter. It's used to display a specific help
  *           about a letter.
  *           If letter equals to zero, all help messages will be shown.
- * 
+ *
  * Returns
  *   void
  */
@@ -420,7 +420,7 @@ bool CommandM100(char letter = 0) {
     echoln(F("G0\tMove axes"));
     echoln(F("G3\tDelay between moves"));
     echoln(F("G4\tDwell"));
-    echoln(F("G6\tDemonstratio mode"));
+    echoln(F("G6\tDemonstration mode"));
     echoln(F("G28\tHome axes"));
     echoln(F("G90\tAbsolute programming"));
     echoln(F("G91\tIncremental programming"));
@@ -430,39 +430,39 @@ bool CommandM100(char letter = 0) {
     echoln(F("M15\tSystem info"));
     echoln(F("M17\tAttach motors"));
     echoln(F("M18\tDetach motors"));
-    echoln(F("M70\tLaser status"));
-    echoln(F("M71\tLaser on"));
-    echoln(F("M72\tLaser off"));
+    //echoln(F("M70\tLaser status"));
+    //echoln(F("M71\tLaser on"));
+    //echoln(F("M72\tLaser off"));
     echoln(F("M80\tPower on"));
     echoln(F("M81\tPower off"));
     echoln(F("M86\tAxes information"));
     echoln(F("M87\tIs all done?"));
     echoln(F("M88\tDistance measure"));
     echoln(F("M89\tMemory information"));
-    echoln(F("M90\tFan information"));
+    //echoln(F("M90\tFan information"));
     // echoln(F("M91\tTemperature information"));
     echoln(F("M92\tSystem information"));
     echoln(F("M99\tReset system"));
     echoln(F("M100\tThis help message"));
-    echoln(F("M111\t(debug_mode) mode"));
+    echoln(F("M111\tDebug mode"));
     echoln(F("M124\tStop all axes"));
     echoln(F("M400\tWait for current moves to finish"));
   }
-  if (letter == 'R' or letter == 0) {
-    echoln(F("R0\tRepeat last command"));
-  }
+  //if (letter == 'R' or letter == 0) {
+    //echoln(F("R0\tRepeat last command"));
+  //}
 }
 
 /* command_minimum
- * 
+ *
  * Description
  *   Set soft minimum position (limit) for axes.
- * 
+ *
  *   command_minimum()
- * 
+ *
  * Parameters
  *   Receive all parameters from SerialCommand next() method.
- * 
+ *
  * Returns
  *   none
  */
@@ -477,15 +477,15 @@ bool Command_minimum(int x, int y, int z, int u, int v, int w, int t) {
 }
 
 /* command_maximum
- * 
+ *
  * Description
  *   Set soft maximum position (limit) for axes.
- * 
+ *
  *   command_maximum()
- * 
+ *
  * Parameters
  *   Receive all parameters from SerialCommand next() method.
- * 
+ *
  * Returns
  *   none
  */
@@ -500,15 +500,15 @@ bool Command_maximum(int x, int y, int z, int u, int v, int w, int t) {
 }
 
 /* command_wait
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   command_wait()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -527,15 +527,15 @@ bool CommandG4(int p, int s) {
 }
 
 /* command_wait
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   command_wait()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -564,15 +564,15 @@ bool Command_wait(int x, int y, int z, int u, int v, int w, int t) {
 }
 
 /* CommandM0
- * 
+ *
  * Description
  *   Stop all axes.
- * 
+ *
  *   CommandM0()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -592,15 +592,15 @@ bool CommandM0() {
 }
 
 /* CommandM15
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   CommandM15()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -616,15 +616,15 @@ bool CommandM15() {
 }
 
 /* CommandM87
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   CommandM87()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -638,15 +638,15 @@ bool CommandM87() {
 }
 
 /* CommandM89
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   CommandM89()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -655,13 +655,13 @@ bool CommandM89() {
   int free = freeMemory();
   int used = total - free;
   int percent = (float)used * 100 / total;
-  // 
+  //
   Alarm memory(75, 85);
   memory.nameWrite("Memory");
   memory.unitWrite("%");
   memory.check(percent);
-  // 
-  echoln(memory.nameRead() + " (" + memory.status_name() + "): " + 
+  //
+  echoln(memory.nameRead() + " (" + memory.status_name() + "): " +
          percent + memory.unitRead() + " used");
   if ((debug_mode)) {
     echoln("  SRAM:\t" + String(total) + " B\n" +
@@ -673,21 +673,21 @@ bool CommandM89() {
 }
 
 /* CommandM91
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   CommandM91()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
 // bool CommandM91() {
   // echoln(power_supply_temperature.nameRead() + " (" +
-         // power_supply_temperature.status_name() + "): " + 
+         // power_supply_temperature.status_name() + "): " +
          // power_supply_temperature.valueRead() +
          // power_supply_temperature.unitRead());
   // if ((debug_mode))
@@ -704,7 +704,7 @@ bool CommandM89() {
            // String(power_supply_temperature.max_criticalRead()) +
            // power_supply_temperature.unitRead());
   // echoln(microcontroller_temperature.nameRead() + " (" +
-         // microcontroller_temperature.status_name() + "): " + 
+         // microcontroller_temperature.status_name() + "): " +
          // microcontroller_temperature.valueRead() +
          // microcontroller_temperature.unitRead());
   // if ((debug_mode))
@@ -723,15 +723,15 @@ bool CommandM89() {
 // }
 
 /* CommandM92
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   CommandM92()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -747,15 +747,15 @@ bool CommandM92() {
 }
 
 /* CommandM111
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   CommandM111()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -765,32 +765,32 @@ bool CommandM111() {
 }
 
 /* CommandR0
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   Command0()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
-bool CommandR0() {
-  GcodeRepeat();
-}
+//bool CommandR0() {
+  //GcodeRepeat();
+//}
 
 /* command_fan
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   command_fan()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -806,15 +806,15 @@ bool CommandR0() {
 // }
 
 /* command_standby
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   command_standby()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -824,15 +824,15 @@ bool command_standby() {
 }
 
 /* command_uptime
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   command_uptime()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -848,15 +848,15 @@ bool command_uptime() {
 }
 
 /* command_axes
- * 
+ *
  * Description
  *   .
- * 
+ *
  *   command_axes()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
