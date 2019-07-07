@@ -435,9 +435,9 @@ bool CommandM100(char letter = 0) {
     //echoln(F("M72\tLaser off"));
     echoln(F("M80\tPower on"));
     echoln(F("M81\tPower off"));
-    echoln(F("M86\tAxes information"));
+    //echoln(F("M86\tAxes information"));
     echoln(F("M87\tIs all done?"));
-    echoln(F("M88\tDistance measure"));
+    //echoln(F("M88\tDistance measure"));
     echoln(F("M89\tMemory information"));
     //echoln(F("M90\tFan information"));
     // echoln(F("M91\tTemperature information"));
@@ -445,8 +445,8 @@ bool CommandM100(char letter = 0) {
     echoln(F("M99\tReset system"));
     echoln(F("M100\tThis help message"));
     echoln(F("M111\tDebug mode"));
-    echoln(F("M124\tStop all axes"));
-    echoln(F("M400\tWait for current moves to finish"));
+    //echoln(F("M124\tStop all axes"));
+    //echoln(F("M400\tWait for current moves to finish"));
   }
   //if (letter == 'R' or letter == 0) {
     //echoln(F("R0\tRepeat last command"));
