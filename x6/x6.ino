@@ -1,8 +1,8 @@
 /* x6.ino, x6 Mark I - Robotic Arm, Arduino main sketch file
- * 
+ *
  * This sketch was developed and tested on: Arduino Mega 2560
  * To work on other Arduino models, some adaptations may be necessary.
- * 
+ *
  * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
@@ -19,7 +19,7 @@
 #include <Temperature.h>     // Marcio Pessoa - Temperature Sensors
 #include <Axis.h>            // Marcio Pessoa - Motor axis
 #include "config.h"          // Marcio Pessoa - Configuration
-#include <MemoryFree.h>      // 
+#include <MemoryFree.h>      //
 
 // Project definitions
 Project x6("x6",  // Platform
@@ -30,7 +30,7 @@ Project x6("x6",  // Platform
            "2",  // Serial number
            "Copyright (c) 2013-2017 Marcio Pessoa",  // Owner
            "undefined. There is NO WARRANTY.",  // License
-           "http://pessoa.eti.br/",  // Website
+           "https://github.com/marcio-pessoa/x6",  // Website
            "Marcio Pessoa <marcio.pessoa@gmail.com>");  // Contact
 
 // RGB LED
