@@ -7,31 +7,31 @@
  * Contributors: none
  */
 
-#include <Arduino.h>         // Arduino - Main library
-#include <Servo.h>           // Arduino - Servo Motor
-#include <Project.h>         // Marcio Pessoa - Basic project definitions
-#include <Timer.h>           // Marcio Pessoa - Timer library
-#include <RGB.h>             // Marcio Pessoa - RGB LED controller
-#include <SigGen.h>          // Marcio Pessoa - Signal Generator
-#include <Alarm.h>           // Marcio Pessoa - Manage alarms
-#include <Switch.h>          // Marcio Pessoa - Switch manipulation
-#include <Fan.h>             // Marcio Pessoa - Fan speed control
-#include <Temperature.h>     // Marcio Pessoa - Temperature Sensors
-#include <Axis.h>            // Marcio Pessoa - Motor axis
-#include "config.h"          // Marcio Pessoa - Configuration
-#include <MemoryFree.h>      //
+#include <Arduino.h>     // Arduino - Main library
+#include <Servo.h>       // Arduino - Servo Motor
+#include <Project.h>     // Marcio Pessoa - Basic project definitions
+#include <Timer.h>       // Marcio Pessoa - Timer library
+#include <RGB.h>         // Marcio Pessoa - RGB LED controller
+#include <SigGen.h>      // Marcio Pessoa - Signal Generator
+#include <Alarm.h>       // Marcio Pessoa - Manage alarms
+#include <Switch.h>      // Marcio Pessoa - Switch manipulation
+#include <Fan.h>         // Marcio Pessoa - Fan speed control
+#include <Temperature.h> // Marcio Pessoa - Temperature Sensors
+#include <Axis.h>        // Marcio Pessoa - Motor axis
+#include "config.h"      // Marcio Pessoa - Configuration
+#include <MemoryFree.h>  //
 
 // Project definitions
-Project x6("x6",  // Platform
-           "I",  // Mark
-           "Robotic Arm",  // Name
-           "0.11b",  // Version
-           "2017-06-18",  // Version date
-           "2",  // Serial number
-           "Copyright (c) 2013-2017 Marcio Pessoa",  // Owner
-           "undefined. There is NO WARRANTY.",  // License
-           "https://github.com/marcio-pessoa/x6",  // Website
-           "Marcio Pessoa <marcio.pessoa@gmail.com>");  // Contact
+Project x6("x6",                                       // Platform
+           "I",                                        // Mark
+           "Robotic Arm",                              // Name
+           "0.11b",                                    // Version
+           "2017-06-18",                               // Version date
+           "2",                                        // Serial number
+           "Copyright (c) 2013-2017 Marcio Pessoa",    // Owner
+           "undefined. There is NO WARRANTY.",         // License
+           "https://github.com/marcio-pessoa/x6",      // Website
+           "Marcio Pessoa <marcio.pessoa@gmail.com>"); // Contact
 
 // RGB LED
 RGB led(R_pin, G_pin, B_pin);
@@ -42,30 +42,30 @@ Timer speaker_period(speaker_timer);
 byte speaker_beep_counter = 0;
 
 // Power relays
-Switch stage2(relay_stage2_pin,  // Electronic identifier
-              LOW,  // Initial state
-              true);  // Inverse logic
-Switch stage3(relay_stage3_pin,  // Electronic identifier
-              LOW,  // Initial state
-              true);  // Inverse logic
+Switch stage2(relay_stage2_pin, // Electronic identifier
+              LOW,              // Initial state
+              true);            // Inverse logic
+Switch stage3(relay_stage3_pin, // Electronic identifier
+              LOW,              // Initial state
+              true);            // Inverse logic
 
 // Temperature sensors
 // Temperature microcontroller_TMP36;  // Microcontroller Temperature sensor
 // Alarm microcontroller_temperature(60,  // Maximum warning
-                                  // 70,  // Maximum critical
-                                  // 10,  // Minimum warning
-                                  // 5);  // Minimum critical
+// 70,  // Maximum critical
+// 10,  // Minimum warning
+// 5);  // Minimum critical
 // Temperature power_supply_TMP36;  // Power Supply Temperature sensor
 // Alarm power_supply_temperature(60,  // Maximum warning
-                               // 70,  // Maximum critical
-                               // 10,  // Minimum warning
-                               // 5);  // Minimum critical
+// 70,  // Maximum critical
+// 10,  // Minimum warning
+// 5);  // Minimum critical
 // Timer temperature_status(temperature_timer * 1000);
 
 // Fan
 // Fan fan_control(fan_control_pin, fan_sensor_pin);
 // Alarm fan(80,   // Warning
-          // 90);  // Critical
+// 90);  // Critical
 // Timer fan_status(fan_timer * 1000);
 
 // System check
@@ -75,68 +75,68 @@ Switch stage3(relay_stage3_pin,  // Electronic identifier
 Timer demonstration_period(0, COUNTDOWN);
 
 // Create Servo and Axis objects
-Axis axis1("X",        // Name
-           axis1_pin,  // Electronic identifier
-           0,          // Minimum hard position
-           180,        // Maximum hard position
-           0,          // Minimum soft position
-           180,        // Maximum soft position
-           0,          // Park position
-           20);        // Move delay
+Axis axis1("X",       // Name
+           axis1_pin, // Electronic identifier
+           0,         // Minimum hard position
+           180,       // Maximum hard position
+           0,         // Minimum soft position
+           180,       // Maximum soft position
+           0,         // Park position
+           20);       // Move delay
 Servo servo1;
-Axis axis2("Y",        // Name
-           axis2_pin,  // Electronic identifier
-           0,          // Minimum hard position
-           180,        // Maximum hard position
-           0,          // Minimum soft position
-           180,        // Maximum soft position
-           30,         // Park position
-           20);        // Move delay
+Axis axis2("Y",       // Name
+           axis2_pin, // Electronic identifier
+           0,         // Minimum hard position
+           180,       // Maximum hard position
+           0,         // Minimum soft position
+           180,       // Maximum soft position
+           30,        // Park position
+           20);       // Move delay
 Servo servo2;
-Axis axis3("Z",        // Name
-           axis3_pin,  // Electronic identifier
-           0,          // Minimum hard position
-           180,        // Maximum hard position
-           0,          // Minimum soft position
-           180,        // Maximum soft position
-           0,          // Park position
-           12);        // Move delay
+Axis axis3("Z",       // Name
+           axis3_pin, // Electronic identifier
+           0,         // Minimum hard position
+           180,       // Maximum hard position
+           0,         // Minimum soft position
+           180,       // Maximum soft position
+           0,         // Park position
+           12);       // Move delay
 Servo servo3;
-Axis axis4("U",        // Name
-           axis4_pin,  // Electronic identifier
-           0,          // Minimum hard position
-           155,        // Maximum hard position
-           0,          // Minimum soft position
-           155,        // Maximum soft position
-           82,         // Park position
-           12);        // Move delay
+Axis axis4("U",       // Name
+           axis4_pin, // Electronic identifier
+           0,         // Minimum hard position
+           155,       // Maximum hard position
+           0,         // Minimum soft position
+           155,       // Maximum soft position
+           82,        // Park position
+           12);       // Move delay
 Servo servo4;
-Axis axis5("V",        // Name
-           axis5_pin,  // Electronic identifier
-           0,          // Minimum hard position
-           180,        // Maximum hard position
-           0,          // Minimum soft position
-           180,        // Maximum soft position
-           10,         // Park position
-           10);        // Move delay
+Axis axis5("V",       // Name
+           axis5_pin, // Electronic identifier
+           0,         // Minimum hard position
+           180,       // Maximum hard position
+           0,         // Minimum soft position
+           180,       // Maximum soft position
+           10,        // Park position
+           10);       // Move delay
 Servo servo5;
-Axis axis6("W",        // Name
-           axis6_pin,  // Electronic identifier
-           0,          // Minimum hard position
-           160,        // Maximum hard position
-           0,          // Minimum soft position
-           160,        // Maximum soft position
-           75,         // Park position
-           8);         // Move delay
+Axis axis6("W",       // Name
+           axis6_pin, // Electronic identifier
+           0,         // Minimum hard position
+           160,       // Maximum hard position
+           0,         // Minimum soft position
+           160,       // Maximum soft position
+           75,        // Park position
+           8);        // Move delay
 Servo servo6;
-Axis axis7("T",        // Name
-           axis7_pin,  // Electronic identifier
-           0,          // Minimum hard position
-           145,        // Maximum hard position
-           0,          // Minimum soft position
-           145,        // Maximum soft position
-           90,         // Park position
-           2);         // Move delay
+Axis axis7("T",       // Name
+           axis7_pin, // Electronic identifier
+           0,         // Minimum hard position
+           145,       // Maximum hard position
+           0,         // Minimum soft position
+           145,       // Maximum soft position
+           90,        // Park position
+           2);        // Move delay
 Servo servo7;
 
 // Wait timer - Wait between moves
@@ -158,18 +158,20 @@ bool standby_done = true;
 bool CommandM80(byte stage = 0);
 bool CommandM81(byte stage = 0);
 
-void setup() {
+void setup()
+{
   // Serial interface
   Serial.begin(serial_speed);
   // Start up message
   echoln("Starting...");
-  CommandM92();  // System information
+  CommandM92(); // System information
   // RGB LED
   led.set(0, 0, 255);
   // Power relays
   stage2.nameWrite("Stage 2");
   stage3.nameWrite("Stage 3");
-  if (stage3.status() == false) standby.disable();
+  if (stage3.status() == false)
+    standby.disable();
   // Power supply DC detection
   pinMode(power_sensor_pin, INPUT);
   // Temperature sensors
@@ -195,12 +197,13 @@ void setup() {
   pinMode(random_Seed_pin, INPUT);
   randomSeed(analogRead(random_Seed_pin));
   // Start up sound
-  //tone(speaker_pin, 2217, 60);
+  // tone(speaker_pin, 2217, 60);
   // G-code ready to receive commands
   GcodeReady();
 }
 
-void loop() {
+void loop()
+{
   // SensorsHandler();
   // HealthCheckHandler();
   NotificationHandler();
