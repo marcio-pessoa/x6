@@ -1,5 +1,5 @@
 /* config.h, x6 Mark I - Robotic Arm, Arduino project config file
- * 
+ *
  * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
@@ -11,7 +11,7 @@ const byte B_pin = 13;
 
 // Speaker
 const byte speaker_pin = 12;
-const int speaker_timer = 250;  // milliseconds
+const int speaker_timer = 250; // milliseconds
 
 // Power
 const byte power_sensor_pin = 43;
@@ -39,10 +39,10 @@ const byte fan_sensor_pin = 2;
 const byte random_Seed_pin = 14;
 
 // Timers
-const byte health_check_timer = 2;  // seconds
+const byte health_check_timer = 2; // seconds
 const byte temperature_timer = 2;  // seconds
-const byte fan_timer = 2;  // seconds
-const byte standby_timer = 2;  // minutes
+const byte fan_timer = 2;          // seconds
+const byte standby_timer = 2;      // minutes
 
 // Debug mode
 bool debug_mode = false;
@@ -56,5 +56,5 @@ byte general_status = OK;
 // Move done
 bool done = true;
 
-// 
+//
 const int FLIMIT = 32767;
